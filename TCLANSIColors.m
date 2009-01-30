@@ -4,7 +4,7 @@
 +(TCLANSIColors *)defaultANSIColors
 {
 	TCLANSIColors *colors = [[TCLANSIColors alloc] init];
-	return colors;
+	return [colors autorelease];
 }
 
 +(TCLANSIColors *)fromDictionary:(NSDictionary *)aDictionary
@@ -23,6 +23,11 @@
 		colorNames = [[NSArray arrayWithObjects:@"black", @"red", @"green", @"yellow", @"blue", @"magenta", @"cyan", @"white", nil] retain];
 	}
 	return colorNames;
+}
+
+-(void)dealloc
+{
+	[super dealloc];
 }
 
 -(id)init

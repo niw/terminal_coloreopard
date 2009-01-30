@@ -11,6 +11,11 @@
 	return pref;
 }
 
+-(void)dealloc
+{
+	[super dealloc];
+}
+
 -(id) init
 {
 	self = [super init];
