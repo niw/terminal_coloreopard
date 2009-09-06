@@ -52,7 +52,7 @@
 -(NSColor *)colorFor:(unsigned int)code
 {
 	NSColor *color = nil;
-	if(code > 0) {
+	if(code > 0 && code <= [[TCLANSIColors ansiColorNames] count]) {
 		NSString *name = [[TCLANSIColors ansiColorNames] objectAtIndex:code-1];
 		if(name) {
 			color = [self valueForKey:[name stringByAppendingString:@"Color"]];
