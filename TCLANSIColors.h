@@ -9,6 +9,14 @@
 	NSColor *magentaColor;
 	NSColor *cyanColor;
 	NSColor *whiteColor;
+	NSColor *brightBlackColor;
+	NSColor *brightRedColor;
+	NSColor *brightGreenColor;
+	NSColor *brightYellowColor;
+	NSColor *brightBlueColor;
+	NSColor *brightMagentaColor;
+	NSColor *brightCyanColor;
+	NSColor *brightWhiteColor;
 }
 +(TCLANSIColors *)defaultANSIColors;
 +(TCLANSIColors *)fromDictionary:(NSDictionary *)aDictionary;
