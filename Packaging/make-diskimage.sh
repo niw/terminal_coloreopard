@@ -24,7 +24,7 @@ EULA_RSRC=$5
 # Create the image
 echo "creating disk image"
 rm -f $DMG_TEMP_NAME
-hdiutil create -srcfolder $SRC_FOLDER -volname $VOLUME_NAME -fs HFS+ -fsargs "-c c=64,a=16,e=16" -format UDRW $DMG_TEMP_NAME
+hdiutil create -srcfolder $SRC_FOLDER -volname $VOLUME_NAME -fs HFS+ -fsargs "-c c=64,a=16,e=16" -uid 99 -gid 99 -format UDRW $DMG_TEMP_NAME
 
 # mount it
 echo "mounting disk image"
